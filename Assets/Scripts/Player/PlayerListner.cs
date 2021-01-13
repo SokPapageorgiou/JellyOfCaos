@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PlayerTransform 
+namespace PlayerListner 
 {
-    public class PlayerTransformTrack 
+    public class PlayerOutput 
     {
         public Transform GetPlayerTransform() 
         {
