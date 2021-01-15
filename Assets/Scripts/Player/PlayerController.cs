@@ -15,10 +15,10 @@ namespace PlayerController
         {
             _speedMetersPerSecond = GetComponent<PlayerScriptObjLoader>().playerData.speedMetersPerSecond;
 
-            _horizontalMovement = Input.GetAxis("Horizontal") * _speedMetersPerSecond * Time.deltaTime * -1;
+            //_horizontalMovement = Input.GetAxis("Horizontal") * _speedMetersPerSecond * Time.deltaTime * -1;
             _verticalMovement = Input.GetAxis("Vertical") * _speedMetersPerSecond * Time.deltaTime;
 
-            transform.Translate(_horizontalMovement, _verticalMovement, 0);
+            transform.Translate(0, _verticalMovement, 0);
         }
     }
 

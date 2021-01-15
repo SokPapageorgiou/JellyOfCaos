@@ -1,17 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CameraListner;
+using PlayerListner;
+using Positioning;
 
 public class StagePivotPosition : MonoBehaviour
 {
-    private CameraOutput _cameraOutput = new CameraOutput();
-    private Transform _currentMainCameraTransform;
+    private float _speedMetersPerSecond;
+    
+    private PlayerOutput _playerOutput = new PlayerOutput();
+    private Movement _movement = new Movement();
+    
+    private void Start()
+    {
+        _speedMetersPerSecond = GetComponent<StagePivotScriptObjLoader>().stageData.speedMetersPerSecond;
+    }
 
     void Update()
     {
-        _currentMainCameraTransform = _cameraOutput.GetMainCameraTransform();
+        if (!HaveRotationInput())
+          AlignPositionWithPlayer();
+    }
 
-        transform.position = new Vector3(_currentMainCameraTransform.position.x, _currentMainCameraTransform.position.y, transform.position.z);
+    private void AlignPositionWithPlayer()
+    {
+        Transform _currentPlayerTransform = _playerOutput.GetPlayerTransform();
+        transform.position = _movement.MoveToDestinationXY(transform.position, _currentPlayerTransform.position, _speedMetersPerSecond);
+    }
+
+    private bool HaveRotationInput()
+    {
+        bool _haveRotationInput = false;
+        
+        float _rotationInput = Input.GetAxis("Horizontal");
+        if (_rotationInput != 0)
+            _haveRotationInput = true;        
+
+        return _haveRotationInput;
     }
 }

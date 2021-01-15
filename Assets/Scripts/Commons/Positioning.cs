@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CameraMovement
+namespace Positioning
 {
-    public class CameraJourney
+    public class Movement
     {
-        public Vector3 MoveCameraToDestination(Vector3 currentPosition, Vector3 target, float _speedMetersPerSecond)
+        public Vector3 MoveToDestinationXY(Vector3 currentPosition, Vector3 target, float _speedMetersPerSecond)
         {
             Vector3 finalPosition = new Vector3(target.x, target.y, currentPosition.z);
             return Vector3.MoveTowards(currentPosition, finalPosition, _speedMetersPerSecond * Time.deltaTime);

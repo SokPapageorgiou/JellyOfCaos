@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6685644733671877040}
   - component: {fileID: 6685644733671877043}
+  - component: {fileID: 448845509}
+  - component: {fileID: 448845512}
   m_Layer: 0
   m_Name: StagePivot
-  m_TagString: Untagged
+  m_TagString: StagePivot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +46,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97cb5dfba94a01a43ac848dea928f50b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &448845509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685644733671877042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ab689a08e5d674a9d7d1c274319372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &448845512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685644733671877042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49eb52861d268e24f824a85a415512a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageData: {fileID: 11400000, guid: 382242c32f9b31c4f8da8be15e8724ad, type: 2}
 --- !u!1001 &6137164857170178239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77,11 +104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 712616150546998677, guid: 355f5340d30a4d4489051485c2821d22, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 712616150546998677, guid: 355f5340d30a4d4489051485c2821d22, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 712616150546998677, guid: 355f5340d30a4d4489051485c2821d22, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

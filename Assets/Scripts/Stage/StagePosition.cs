@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CameraListner;
+using Positioning;
+using PlayerListner;
 
 public class StagePosition : MonoBehaviour
 {
-    private CameraOutput _cameraOutput = new CameraOutput();
-    private Transform _currentMainCameraPosition;
+    private float _speedMetersPerSecond;
 
-    // Update is called once per frame
+    private PlayerOutput _playerOutput = new PlayerOutput();
+    private Movement _movement = new Movement();
+
+    private void Start()
+    {
+        _speedMetersPerSecond = GetComponent<StagePivotScriptObjLoader>().stageData.speedMetersPerSecond;
+    }
+
     void Update()
     {
-        _currentMainCameraPosition = _cameraOutput.GetMainCameraTransform();
+        CompensatePlayerPosition();
+    }
 
-        transform.position = new Vector3(_currentMainCameraPosition.position.x * -1, _currentMainCameraPosition.position.y * -1, transform.position.y);
+    private void CompensatePlayerPosition()
+    {
+        Transform _currentPlayerPosition = _playerOutput.GetPlayerTransform();
+        Vector3 _targetPosition = new Vector3(_currentPlayerPosition.position.x * -1, _currentPlayerPosition.position.y * -1, transform.position.z);
+
+        transform.localPosition = _movement.MoveToDestinationXY(transform.localPosition, _targetPosition, _speedMetersPerSecond);
     }
 }

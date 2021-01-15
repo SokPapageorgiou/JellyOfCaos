@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PlayerListner;
-using CameraMovement;
+using Positioning;
 
 
 namespace CameraController 
@@ -12,7 +12,7 @@ namespace CameraController
         
         private float _speedMetersPerSecond;        
         private PlayerOutput _playerOutput = new PlayerOutput();
-        private CameraJourney _cameraMovement = new CameraJourney();
+        private Movement _cameraMovement = new Movement();
         private Transform _currentPlayerTransform;
 
         void Update()
@@ -21,7 +21,7 @@ namespace CameraController
             _currentPlayerTransform = _playerOutput.GetPlayerTransform();
             
             transform.LookAt(_currentPlayerTransform);
-            transform.position = _cameraMovement.MoveCameraToDestination(transform.position, _currentPlayerTransform.position, _speedMetersPerSecond);            
+            transform.position = _cameraMovement.MoveToDestinationXY(transform.position, _currentPlayerTransform.position, _speedMetersPerSecond);            
         }
     }
 

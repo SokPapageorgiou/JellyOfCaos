@@ -123,6 +123,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &448845508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6685644733671877042, guid: 6b56d32b8ef919f4198ac7c61abba67e, type: 3}
+  m_PrefabInstance: {fileID: 6685644735118924354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &448845509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448845508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49eb52861d268e24f824a85a415512a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageData: {fileID: 11400000, guid: 382242c32f9b31c4f8da8be15e8724ad, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,24 +234,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 29.35, y: 180, z: 0}
---- !u!1 &963194225 stripped
+--- !u!1 &1151391394 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 550867491070544566, guid: 833739abed556244f96f25d1deecfd12, type: 3}
-  m_PrefabInstance: {fileID: 550867492000180167}
+  m_CorrespondingSourceObject: {fileID: 6685644735017440550, guid: 6b56d32b8ef919f4198ac7c61abba67e, type: 3}
+  m_PrefabInstance: {fileID: 6685644735118924354}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &963194226
+--- !u!114 &1151391395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
+  m_GameObject: {fileID: 1151391394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6fd7ea676108b49941e5bc6953360a, type: 3}
+  m_Script: {fileID: 11500000, guid: 49eb52861d268e24f824a85a415512a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraData: {fileID: 11400000, guid: 4b7f1721fe699744fb4835a986ca5879, type: 2}
+  stageData: {fileID: 11400000, guid: 382242c32f9b31c4f8da8be15e8724ad, type: 2}
 --- !u!1001 &550867492000180167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -403,5 +421,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StagePivot
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 448845512, guid: 6b56d32b8ef919f4198ac7c61abba67e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6b56d32b8ef919f4198ac7c61abba67e, type: 3}
