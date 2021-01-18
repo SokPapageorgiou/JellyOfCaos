@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Positioning
+namespace Position
 {
-    public class Movement
+    public class PositionMovement
     {
         public Vector3 MoveToDestinationXY(Vector3 currentPosition, Vector3 target, float _speedMetersPerSecond)
         {

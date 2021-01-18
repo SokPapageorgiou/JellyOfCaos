@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Positioning;
+using Position;
 using PlayerListner;
 
 public class StagePosition : MonoBehaviour
@@ -9,7 +9,7 @@ public class StagePosition : MonoBehaviour
     private float _speedMetersPerSecond;
 
     private PlayerOutput _playerOutput = new PlayerOutput();
-    private Movement _movement = new Movement();
+    private PositionMovement _movement = new PositionMovement();
 
     private void Start()
     {

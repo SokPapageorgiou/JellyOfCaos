@@ -5,5 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Camera", menuName = "ScriptableObjects/Camera")]
 public class CameraData : ScriptableObject
 {
-    public float speedMetersPerSecond;
-}
+    public float positionSpeed;
+
+    public float rotationLimitZ;
+    public float rotationSpeedZ;
+ }
