@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PlayerListner;
 
 namespace CameraRotation 
 {
@@ -10,14 +11,14 @@ namespace CameraRotation
         private float _zSpeed;
         private float _zAngleLimit;
 
-        private Transform _player;
+        private PlayerOutput _playerOutput;
         
         private void Start()
         {
             _zSpeed = GetComponent<CameraScriptObjLoader>().cameraData.rotationZSpeed;
             _zAngleLimit = GetComponent<CameraScriptObjLoader>().cameraData.rotationZLimit;
 
-            _player = GameObject.FindGameObjectWithTag("Player").transform;
+            _playerOutput = new PlayerOutput();
         }
 
         private void Update()
@@ -28,8 +29,8 @@ namespace CameraRotation
 
         private void FullRotation() 
         {
-            transform.LookAt(_player);
-            transform.Rotate(0,0,ZRotation());
+            transform.LookAt(_playerOutput.GetPlayerTransform());
+            transform.Rotate(transform.rotation.x, transform.rotation.y, ZRotation());
         }
         
         private float ZRotation()
