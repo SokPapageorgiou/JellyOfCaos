@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 712616150546998682}
   - component: {fileID: 712616150546998683}
   - component: {fileID: 712616150546998680}
-  - component: {fileID: 712616150546998676}
   m_Layer: 0
   m_Name: StageBase
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712616150546998681}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 15, y: 10, z: 10}
   m_Children: []
@@ -97,15 +96,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &712616150546998676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712616150546998681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e9dba59dfd0f043b6b4e2ae8e94429, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
