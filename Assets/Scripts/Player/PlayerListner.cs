@@ -6,11 +6,23 @@ namespace PlayerListner
 {
     public class PlayerOutput 
     {
-        public Transform GetPlayerTransform() 
+        public Transform GetPlayerTransform()
         {
-            Transform _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-            
+            Transform _playerTransform = FindPlayer().transform;
+
             return _playerTransform;
+        }
+
+        public bool GetPlayerCollisionGround() 
+        {
+            bool _collisionGround = FindPlayer().GetComponent<PlayerScriptObjLoader>().playerData.collisionGround;
+
+            return _collisionGround;
+        }
+
+        private GameObject FindPlayer()
+        {
+            return GameObject.FindGameObjectWithTag("Player");
         }
     }
 

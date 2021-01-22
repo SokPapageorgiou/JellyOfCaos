@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c083b499e2863548998cd0591a69341, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
+  collisionGround: 0
   gravityForce: 50

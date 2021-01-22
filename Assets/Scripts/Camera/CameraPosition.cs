@@ -23,7 +23,7 @@ namespace CameraPosition
             _currentPlayerTransform = _playerOutput.GetPlayerTransform();
         }
 
-        void Update()
+        void FixedUpdate()
         {
             transform.position = _cameraMovement.MoveToDestinationXY(transform.position, _currentPlayerTransform.position, _positionSpeed);            
         }

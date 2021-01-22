@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MainCamera
   m_EditorClassIdentifier: 
   positionSpeed: 5
-  rotationZLimit: 45
+  rotationZLimit: 30
   rotationZSpeed: 100
+  rotationZSpeedRecovery: 50
