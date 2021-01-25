@@ -5,5 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Player", menuName = "ScriptableObjects/Player")]
 public class PlayerData : ScriptableObject
 {
-    public float speedMetersPerSecond;
+    public bool collisionGround;
+    public float gravityForce;
+    public float jumpForce;
+    
 }

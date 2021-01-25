@@ -9,4 +9,6 @@ public class CameraData : ScriptableObject
 
     public float rotationZLimit;
     public float rotationZSpeed;
+    public float rotationZSpeedRecovery;
+    public float rotationZThreshold;
  }

@@ -6,12 +6,23 @@ namespace CameraListner
 {
     public class CameraOutput 
     {
-        public Transform GetMainCameraTransform() 
+        public Transform GetTransform()
         {
-            Transform _mainCameraTransform = GameObject.FindGameObjectWithTag("MainCamera").transform;
+            Transform _mainCameraTransform = FindMainCamera().transform;
 
             return _mainCameraTransform;
         }
-    }
 
+        public float GetZRotation() 
+        {
+            float _zRotation = FindMainCamera().transform.eulerAngles.z;
+
+            return _zRotation;
+        }
+
+        private GameObject FindMainCamera()
+        {
+            return GameObject.FindGameObjectWithTag("MainCamera");
+        }
+    }
 }
