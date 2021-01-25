@@ -7,5 +7,6 @@ public class PlayerData : ScriptableObject
 {
     public bool collisionGround;
     public float gravityForce;
+    public float jumpForce;
     
 }

@@ -16,3 +16,4 @@ MonoBehaviour:
   rotationZLimit: 30
   rotationZSpeed: 100
   rotationZSpeedRecovery: 50
+  rotationZThreshold: 2
